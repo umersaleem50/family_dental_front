@@ -1,0 +1,117 @@
+@import "./button.scss";
+@import "./utilities.scss";
+@import "./typography.scss";
+
+:root {
+  --color-black: #202020;
+  --color-blue: #05aff2;
+  --color-white: #f2f2f2;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Nunito Sans", sans-serif;
+}
+
+body {
+  font-family: inherit;
+  max-width: 114rem;
+  margin: 0 auto;
+}
+
+header {
+  padding-top: 2rem;
+  position: relative;
+  height: 100vh;
+}
+
+.navi {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.navi__logo {
+  width: 5rem;
+  border-radius: 50%;
+}
+
+.navi__links {
+  display: flex;
+  align-items: center;
+  flex: 0 0 35%;
+  justify-content: space-between;
+  list-style: none;
+}
+
+.navi__link {
+  font-size: 1.6rem;
+  color: var(--color-black);
+  cursor: pointer;
+  font-weight: 600;
+  padding: 0.5rem 0rem;
+  transition: color 0.2s ease;
+}
+
+.navi__link:hover {
+  color: var(--color-blue);
+}
+
+.navi__link--active {
+  border-bottom: 0.3rem solid var(--color-blue);
+  color: var(--color-blue);
+}
+
+.hero {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  top: 50%;
+  left: 0%;
+  position: absolute;
+  transform: translate(0, -50%);
+}
+
+.hero--image img {
+  width: 60vh;
+  border-radius: 50%;
+  z-index: 10;
+}
+.hero--image {
+  position: relative;
+}
+.hero--image::before {
+  z-index: 2;
+  display: block;
+  position: absolute;
+  width: 64vh;
+  height: 64vh;
+  bottom: 0;
+  content: "";
+  border-radius: 50%;
+  border: 1rem solid var(--color-blue);
+}
+
+.cta {
+  display: flex;
+  width: 70%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.6rem;
+}
+
+.cta a {
+  font-size: 1.8rem;
+  text-decoration: none;
+  width: auto;
+  color: var(--color-black);
+}

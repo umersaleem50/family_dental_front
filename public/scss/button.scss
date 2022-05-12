@@ -1,0 +1,23 @@
+.btn {
+  background-color: var(--color-black);
+  text-align: center;
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  padding: 1rem 3rem;
+  transition: all 0.2s ease-in;
+}
+
+.btn--cta {
+  font-weight: bold;
+  padding: 2rem 3rem;
+  background-color: var(--color-blue);
+}
+
+.btn:hover {
+  background-color: var(--color-blue);
+  transform: translateY(-0.2rem);
+  box-sizing: 0 0.2rem 0.5rem rgba(#000, 0.3);
+}
