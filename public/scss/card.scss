@@ -1,0 +1,24 @@
+.card {
+  width: auto;
+
+  background-color: var(--color-blue);
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.329);
+}
+.card__img img {
+  width: 100%;
+  object-fit: cover;
+  height: 20rem;
+}
+
+.card__detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+
+.card__detail *:not(:last-child) {
+  margin-bottom: 1.5rem;
+}

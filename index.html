@@ -2,13 +2,18 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/jpg" href="./public/assets/logo.jpg" />
+    <link rel="icon" type="image/jpg" href="/assets/logo.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Family Dental - Smile all day</title>
@@ -50,7 +55,229 @@
     </div>
   </header>
   <body>
-    <section>hello</section>
+    <section>
+      <h4 class="heading--section mb-medium">
+        Turn your smile into<br /><span>an experience</span>
+      </h4>
+      <div class="container container--cards">
+        <div class="card">
+          <div class="card__img">
+            <img src="/assets/crowning.jpg" alt="Crowning" />
+          </div>
+          <div class="card__detail">
+            <h5 class="heading--card">Crowning</h5>
+            <p class="typo--para typo--white">
+              Dental crowns are tooth-shaped “caps” that can be placed over your
+              tooth. Think of it like a snug hat for your tooth.
+            </p>
+            <a href="#" class="btn btn--readmore">Read more</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="/assets/cleaning.jpg" alt="Teeth cleaning" />
+          </div>
+          <div class="card__detail">
+            <h5 class="heading--card">Teeth Cleanings</h5>
+            <p class="typo--para typo--white">
+              Dental crowns are tooth-shaped “caps” that can be placed over your
+              tooth. Think of it like a snug hat for your tooth.
+            </p>
+            <a href="#" class="btn btn--readmore">Read more</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="/assets/rootcanal.jpg" alt="Root canal" />
+          </div>
+          <div class="card__detail">
+            <h5 class="heading--card">Root Canal</h5>
+            <p class="typo--para typo--white">
+              Dental crowns are tooth-shaped “caps” that can be placed over your
+              tooth. Think of it like a snug hat for your tooth.
+            </p>
+            <a href="#" class="btn btn--readmore">Read more</a>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card__img">
+            <img src="/assets/extraction.jpg" alt="Tooth extraction" />
+          </div>
+          <div class="card__detail">
+            <h5 class="heading--card">Tooth extraction</h5>
+            <p class="typo--para typo--white">
+              Dental crowns are tooth-shaped “caps” that can be placed over your
+              tooth. Think of it like a snug hat for your tooth.
+            </p>
+            <a href="#" class="btn btn--readmore">Read more</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h4 class="heading--section mb-medium">
+        Some memories of our<br /><span>happy patients</span>
+      </h4>
+      <div class="container container--gallery">
+        <div class="container--gallery__img container--gallery__img--1">
+          <img src="/assets/patient1.jpg" alt="patient1" />
+        </div>
+        <div class="container--gallery__img container--gallery__img--2">
+          <img src="/assets/patient2.jpg" alt="patient2" />
+        </div>
+        <div class="container--gallery__img container--gallery__img--3">
+          <img src="/assets/patient3.jpg" alt="patient3" />
+        </div>
+        <div class="container--gallery__img container--gallery__img--4">
+          <img src="/assets/patient4.jpg" alt="patient4" />
+        </div>
+        <div class="container--gallery__img container--gallery__img--5">
+          <img src="/assets/patient5.jpg" alt="patient5" />
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h4 class="heading--section mb-medium">
+        What our patients<br /><span>says about us</span>
+      </h4>
+      <div class="container container--reviews">
+        <div class="reviews">
+          <article class="review">
+            <figure class="review__userImg">
+              <img src="/assets/users/user1.jpg" alt="user 1" srcset="" />
+            </figure>
+
+            <div class="review__detail">
+              <p class="typo--review">
+                This is the Best experience I have so far in a clinc. The clinic
+                is so clean and dental is also professional. Looking forward to
+                come back again.
+              </p>
+              <div class="review__rating">
+                <div class="rating__stars">
+                  <svg class="ratingIcon ratingIcon--filled">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="ratingIcon ratingIcon--filled">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="ratingIcon ratingIcon--filled">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="ratingIcon ratingIcon--filled">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="ratingIcon">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                </div>
+                <h6 class="typo--username mr-small">Ahmad Aslam</h6>
+              </div>
+            </div>
+          </article>
+          <article class="review">
+            <figure class="review__userImg">
+              <img src="/assets/Dental.jpg" alt="user 1" srcset="" />
+            </figure>
+
+            <div class="review__detail">
+              <p class="typo--review">
+                This is the Best experience I have so far in a clinc. The clinic
+                is so clean and dental is also professional. Looking forward to
+                come back again.
+              </p>
+              <div class="review__rating">
+                <div class="rating__stars">
+                  <svg class="ratingIcon ratingIcon--filled">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="ratingIcon ratingIcon--filled">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="ratingIcon ratingIcon--filled">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="ratingIcon ratingIcon--filled">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="ratingIcon">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                </div>
+                <h6 class="typo--username mr-small">Ahmad Aslam</h6>
+              </div>
+            </div>
+          </article>
+          <article class="review">
+            <figure class="review__userImg">
+              <img src="/assets/Dental.jpg" alt="user 1" srcset="" />
+            </figure>
+
+            <div class="review__detail">
+              <p class="typo--review">
+                This is the Best experience I have so far in a clinc. The clinic
+                is so clean and dental is also professional. Looking forward to
+                come back again.
+              </p>
+              <div class="review__rating">
+                <div class="rating__stars">
+                  <svg class="ratingIcon ratingIcon--filled">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="ratingIcon ratingIcon--filled">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="ratingIcon ratingIcon--filled">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="ratingIcon ratingIcon--filled">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                  <svg class="ratingIcon">
+                    <use xlink:href="/assets/icons/icons.svg#icon-star"></use>
+                  </svg>
+                </div>
+                <h6 class="typo--username mr-small">Ahmad Aslam</h6>
+              </div>
+            </div>
+          </article>
+        </div>
+        <div class="reviews__controller">
+          <svg class="reviews__control review__control--left">
+            <use xlink:href="/assets/icons/icons.svg#icon-left"></use>
+          </svg>
+          <div class="review__buttons">
+            <div class="review__button review__button--active"></div>
+            <div class="review__button"></div>
+            <div class="review__button"></div>
+            <div class="review__button"></div>
+          </div>
+          <svg class="reviews__control review__control--right">
+            <use xlink:href="/assets/icons/icons.svg#icon-right"></use>
+          </svg>
+        </div>
+      </div>
+    </section>
+    <div class="section">
+      <h4 class="heading--section mb-medium">
+        Meet with our<br /><span>professional dentist</span>
+      </h4>
+      <div class="container container--dentalDetail">
+        <div class="dentalDetail">
+          <h3 class="typo--username">I'm Dr.Asadullah.</h3>
+          <p class="typo--para">
+            I have been working as dental surgien for more than 3 years. Making
+            my patient to smile by helping out in dental issues.
+          </p>
+        </div>
+        <div class="dental--image">
+          <img src="/assets/Dental.jpg" alt="Dental" />
+        </div>
+      </div>
+    </div>
+
     <!-- <div id="app"></div> -->
     <script type="module" src="/main.js"></script>
   </body>

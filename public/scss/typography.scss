@@ -18,3 +18,72 @@
   font-size: 1.8rem;
   color: var(--color-black);
 }
+
+.heading--section {
+  font-size: 3rem;
+  color: var(--color-black);
+  text-align: center;
+}
+
+.heading--section span {
+  color: var(--color-blue);
+}
+
+.heading--card {
+  font-size: 2rem;
+  text-align: center;
+  color: var(--color-white);
+}
+
+.typo--para {
+  font-size: 1.4rem;
+  text-align: left;
+}
+
+.typo--white {
+  color: var(--color-white);
+}
+
+.typo--review {
+  font-size: 1.8rem;
+  font-style: italic;
+  text-transform: uppercase;
+  color: var(--color-black);
+  line-height: 1.5;
+  position: relative;
+}
+
+.typo--review::before {
+  color: #05aff28c;
+  content: ",,";
+  font-size: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 0rem;
+  margin-top: -2rem;
+  transform: translateY(-100%);
+}
+
+.typo--review::after {
+  color: #05aff28c;
+  content: ",,";
+  font-size: 10rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: 4rem;
+  transform: translate(-50%, 60%);
+}
+
+.typo--username {
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--color-blue);
+  align-self: flex-end;
+}
+
+.typo--name {
+  font-style: 2rem;
+  color: var(--color-blue);
+}
