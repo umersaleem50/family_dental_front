@@ -1,39 +1,83 @@
-import { moveSlide } from "./js/reviewController";
-// import './style.css'
-
-// document.querySelector('#app').innerHTML = `
-//   <h1>Hello Vite!</h1>
-//   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
-// `
+import {
+  moveSlide,
+  createDots,
+  clearAllDots,
+  activeDot,
+} from "./js/reviewController";
+import { displayMap } from "./js/map";
 
 const reviews = document.querySelectorAll(".review");
 const btnReviewLeft = document.querySelector(".review__control--left");
 const btnReviewRight = document.querySelector(".review__control--right");
+const dotParent = document.querySelector(".review__buttons");
+let reviewButtonArr;
+let interval;
+
 let currentSlide = 1;
 
-btnReviewLeft.addEventListener("click", (e) => {
-  // e.preventDefault();
-  if (currentSlide <= 1) {
-    currentSlide = reviews.length;
-  } else {
-    currentSlide -= 1;
-  }
+const cleanAndSlide = (currentSlide) => {
   moveSlide(currentSlide);
-});
+  clearAllDots();
+  activeDot(currentSlide);
+};
 
-btnReviewRight.addEventListener("click", (e) => {
+const setnewInterval = () => {
+  return setInterval(() => {
+    moveSlideRight();
+  }, 5000);
+};
+
+const resetInterval = () => {
+  clearInterval(interval);
+  interval = setnewInterval();
+};
+
+export const moveSlideRight = () => {
   if (currentSlide < reviews.length) {
     currentSlide += 1;
   } else {
     currentSlide = 1;
   }
-  moveSlide(currentSlide);
+  cleanAndSlide(currentSlide);
+};
+
+export const moveSlideLeft = () => {
+  if (currentSlide <= 1) {
+    currentSlide = reviews.length;
+  } else {
+    currentSlide -= 1;
+  }
+  cleanAndSlide(currentSlide);
+};
+
+btnReviewLeft.addEventListener("click", (e) => {
+  moveSlideLeft();
+  resetInterval();
 });
-console.log(reviews);
+
+btnReviewRight.addEventListener("click", (e) => {
+  moveSlideRight();
+  resetInterval();
+});
+
+dotParent.addEventListener("click", function (e) {
+  if (e.target.classList.contains("review__button")) {
+    currentSlide = e.target.dataset["slide"] * 1;
+    cleanAndSlide(currentSlide);
+    resetInterval();
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   //dom is fully loaded, but maybe waiting on images & css files
-  console.log("loaded");
-  console.log(reviews);
+  // console.log("loaded");
+  // console.log(reviews);
+  createDots(reviews, dotParent);
   moveSlide(currentSlide);
+  clearAllDots();
+  activeDot(currentSlide);
+
+  interval = setnewInterval();
+
+  displayMap();
 });
