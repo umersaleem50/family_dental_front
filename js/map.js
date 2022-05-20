@@ -1,4 +1,5 @@
 import mapboxgl from "mapbox-gl/dist/mapbox-gl.js";
+// import logo from "../public/assets/logo.jpg";
 
 export const displayMap = () => {
   mapboxgl.accessToken =
@@ -12,11 +13,16 @@ export const displayMap = () => {
     center: [73.188283, 31.465921],
     zoom: 17,
     // attributionControl: false,
-    // scrollZoom: false,
+    scrollZoom: false,
   });
+
+  const popup = `<div class="popup"><img src="assets/logo.jpg"/><h6 class="typo--para">Office No 7 Civic Center
+  West Canal Road
+  Gatwala, Faisalabad, 38000
+  Pakistan</h6></div></div></div>`;
 
   const marker = new mapboxgl.Marker({})
     .setLngLat([73.188283, 31.465921])
-    .setPopup(new mapboxgl.Popup().setHTML("<h1>Hello World!</h1>"))
+    .setPopup(new mapboxgl.Popup().setHTML(popup))
     .addTo(map);
 };

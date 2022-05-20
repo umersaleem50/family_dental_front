@@ -16,6 +16,12 @@
   background-color: var(--color-blue);
 }
 
+.btn--cta--fixed {
+  position: fixed;
+  left: 6rem;
+  bottom: 6rem;
+}
+
 .btn:hover {
   background-color: var(--color-blue);
   transform: translateY(-0.2rem);
@@ -31,4 +37,19 @@
 
 .btn--readmore:hover {
   background-color: var(--color-blue-dark);
+}
+
+.btn--direction {
+  text-decoration: none;
+  margin: 3rem 0;
+  justify-self: center;
+}
+
+.btn--submit {
+  padding: 1rem 2rem;
+  font-size: 1.6rem;
+  background-color: var(--color-black);
+}
+.btn--submit:hover {
+  background-color: var(--color-black);
 }

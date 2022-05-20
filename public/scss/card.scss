@@ -2,7 +2,7 @@
   width: auto;
 
   background-color: var(--color-blue);
-  border-radius: 0.5rem;
+  border-radius: var(--radius-round);
   overflow: hidden;
   box-shadow: 0.5rem 0.5rem 3rem rgba(0, 0, 0, 0.329);
 }

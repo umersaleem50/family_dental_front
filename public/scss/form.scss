@@ -1,0 +1,45 @@
+.contact {
+  background-color: var(--color-blue);
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  padding: 5rem 8rem;
+  border-radius: var(--radius-round);
+  box-shadow: 2rem 0rem 5rem rgba(37, 37, 37, 0.432);
+}
+.contact input,
+.contact textarea {
+  border-radius: var(--radius-round);
+  outline: none;
+  background-color: var(--color-white);
+  font-size: 1.6rem;
+  font-family: inherit;
+  border: none;
+  padding: 1rem 2rem;
+  color: var(--color-black);
+  border-bottom: 4px solid transparent;
+  border-top: 4px solid transparent;
+  transition: border-bottom 0.2s ease-in;
+  margin-bottom: 1rem;
+}
+
+.contact textarea {
+  height: 15rem;
+  resize: none;
+  margin-bottom: 3rem;
+}
+
+.contact .text--message {
+  height: 10rem;
+}
+
+.contact input[type="email"]:invalid {
+  border-bottom: 4px solid rgb(255, 114, 114);
+}
+
+.contact label {
+  font-size: 1.4rem;
+  color: var(--color-white);
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}

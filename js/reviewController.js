@@ -19,7 +19,6 @@ export const activeDot = (currentSlide) => {
 };
 
 export const createDots = (el, dotParent) => {
-  console.log(el);
   dotParent.innerHTML = "";
   let dotsArr = [];
 

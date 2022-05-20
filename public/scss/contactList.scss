@@ -1,0 +1,24 @@
+.contactList svg {
+  height: 3rem;
+  width: 3rem;
+  fill: var(--color-blue);
+  margin-right: 2rem;
+}
+
+.contactList {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 30rem;
+  padding-left: 3rem;
+  padding-right: 6rem;
+}
+.contactList--link {
+  display: flex;
+  align-items: center;
+}
+.contactList--link a {
+  text-decoration: none;
+  color: var(--color-black);
+  font-size: 1.6rem;
+}

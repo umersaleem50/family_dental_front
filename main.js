@@ -6,11 +6,17 @@ import {
 } from "./js/reviewController";
 import { displayMap } from "./js/map";
 
+import { activateNavLinks } from "./js/navlinks";
+
+import { intersector } from "./js/navi";
+import { makeAnAppointScroll } from "./js/navlinks";
+
+const header = document.querySelector("header");
 const reviews = document.querySelectorAll(".review");
 const btnReviewLeft = document.querySelector(".review__control--left");
 const btnReviewRight = document.querySelector(".review__control--right");
 const dotParent = document.querySelector(".review__buttons");
-let reviewButtonArr;
+
 let interval;
 
 let currentSlide = 1;
@@ -79,5 +85,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
   interval = setnewInterval();
 
+  activateNavLinks();
+
   displayMap();
+
+  intersector.observe(header);
+
+  makeAnAppointScroll();
 });
